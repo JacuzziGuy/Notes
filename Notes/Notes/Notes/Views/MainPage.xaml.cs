@@ -37,10 +37,8 @@ namespace Notes.Views
 			title.Text = "";
 			note.Text = "";
 			title.Completed += TitleCompleted;
-			note.Completed += NoteCompleted;
 			notesList.ItemTapped += ItemTapped;
 		}
-
 		private void ItemTapped(object sender, EventArgs e)
 		{
 			ItemModel item = notesList.SelectedItem as ItemModel;
@@ -51,11 +49,6 @@ namespace Notes.Views
 		{
 			if (note.Text == "" && title.Text != "")
 				note.Focus();
-		}
-		private void NoteCompleted(object sender, EventArgs e)
-		{
-			if (note.Text != "" && title.Text != "")
-				AddItem();
 		}
 		private void SubmitClicked(object sender, EventArgs e)
 		{

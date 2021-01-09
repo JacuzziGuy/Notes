@@ -13,7 +13,7 @@
                 <DataTemplate>
                     <ViewCell>
                         <FlexLayout AlignItems="Center">
-                            <Label Text="{Binding Title}" HorizontalTextAlignment="Center" BindingContext="{Binding .}"/>
+                            <Label Text="{Binding Title}" HorizontalTextAlignment="Center" BindingContext="{Binding .}" Margin="0,0,20,0"/>
                             <Button Text="Usuń" Clicked="DeleteClicked"/>
                         </FlexLayout>
                     </ViewCell>
