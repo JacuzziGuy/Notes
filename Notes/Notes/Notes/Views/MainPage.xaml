@@ -5,16 +5,16 @@
              Title="Notatki">
     <StackLayout Margin="40">
         <Label Text="Dodaj notatkę" FontSize="Large" Margin="0,0,0,20"/>
-        <Entry x:Name="title" Placeholder="Tytuł..." FontSize="Large"/>
-        <Editor x:Name="note" Placeholder="Notatka..." HeightRequest="150"/>
-        <Button Text="Dodaj" Clicked="SubmitClicked"/>
-        <ListView x:Name="notesList">
+        <Entry x:Name="title" Placeholder="Tytuł..." FontSize="Large" Keyboard="Chat"/>
+        <Editor x:Name="note" Placeholder="Notatka..." HeightRequest="150" Keyboard="Chat"/>
+        <Button Text="Dodaj" Clicked="SubmitClicked" Margin="0,0,0,20"/>
+        <ListView x:Name="notesList" HasUnevenRows="True">
             <ListView.ItemTemplate>
                 <DataTemplate>
                     <ViewCell>
                         <FlexLayout AlignItems="Center">
-                            <Label Text="{Binding Title}" HorizontalTextAlignment="Center" BindingContext="{Binding .}" Margin="0,0,20,0"/>
-                            <Button Text="Usuń" Clicked="DeleteClicked"/>
+                            <Label Text="{Binding Title}" HorizontalTextAlignment="Center" BindingContext="{Binding .}" FontSize="Large"/>
+                            <Button Text="Usuń" Clicked="DeleteClicked" Margin="20,10,20,10"/>
                         </FlexLayout>
                     </ViewCell>
                 </DataTemplate>
